@@ -38,8 +38,8 @@ DefaultGroupName=Dolibarr
 ;Compression=none
 Compression=lzma
 SolidCompression=yes
-WizardImageFile=build\exe\doliwamp\doliwamp.bmp
-WizardSmallImageFile=build\exe\doliwamp\doliwampsmall.bmp
+WizardImageFile=dev\build\exe\doliwamp\doliwamp.bmp
+WizardSmallImageFile=dev\build\exe\doliwamp\doliwampsmall.bmp
 SetupIconFile=doc\images\dolibarr_favicon.ico
 ;To say the installer must be ran as admin
 PrivilegesRequired=admin
@@ -55,21 +55,21 @@ LanguageDetectionMethod=uilanguage
 ;SignedUninstaller=yes
 
 [Languages]
-Name: "en"; MessagesFile: "compiler:Default.isl,build\exe\doliwamp\Languages\MyEnglish.isl"
-Name: "br"; MessagesFile: "compiler:Languages\Portuguese.isl,build\exe\doliwamp\Languages\MyBrazilianPortuguese.isl"
-Name: "ca"; MessagesFile: "compiler:Languages\Catalan.isl,build\exe\doliwamp\Languages\MyCatalan.isl"
-Name: "da"; MessagesFile: "compiler:Languages\Danish.isl,build\exe\doliwamp\Languages\MyDanish.isl"
-Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl,build\exe\doliwamp\Languages\MySpanish.isl"
-Name: "nl"; MessagesFile: "compiler:Languages\Dutch.isl,build\exe\doliwamp\Languages\MyDutch.isl"
-Name: "fi"; MessagesFile: "compiler:Languages\Finnish.isl,build\exe\doliwamp\Languages\MyFinnish.isl"
-Name: "fr"; MessagesFile: "compiler:Languages\French.isl,build\exe\doliwamp\Languages\MyFrench.isl"
-Name: "ge"; MessagesFile: "compiler:Languages\German.isl,build\exe\doliwamp\Languages\MyGerman.isl"
-Name: "it"; MessagesFile: "compiler:Languages\Italian.isl,build\exe\doliwamp\Languages\MyItalian.isl"
-Name: "nb"; MessagesFile: "compiler:Languages\Norwegian.isl,build\exe\doliwamp\Languages\MyNorwegian.isl"
-Name: "po"; MessagesFile: "compiler:Languages\Polish.isl,build\exe\doliwamp\Languages\MyPolish.isl"
-Name: "pt"; MessagesFile: "compiler:Languages\Portuguese.isl,build\exe\doliwamp\Languages\MyPortuguese.isl"
-Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl,build\exe\doliwamp\Languages\MyRussian.isl"
-Name: "sv"; MessagesFile: "compiler:Languages\Slovenian.isl,build\exe\doliwamp\Languages\MySlovenian.isl"
+Name: "en"; MessagesFile: "compiler:Default.isl,dev\build\exe\doliwamp\Languages\MyEnglish.isl"
+Name: "br"; MessagesFile: "compiler:Languages\Portuguese.isl,dev\build\exe\doliwamp\Languages\MyBrazilianPortuguese.isl"
+Name: "ca"; MessagesFile: "compiler:Languages\Catalan.isl,dev\build\exe\doliwamp\Languages\MyCatalan.isl"
+Name: "da"; MessagesFile: "compiler:Languages\Danish.isl,dev\build\exe\doliwamp\Languages\MyDanish.isl"
+Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl,dev\build\exe\doliwamp\Languages\MySpanish.isl"
+Name: "nl"; MessagesFile: "compiler:Languages\Dutch.isl,dev\build\exe\doliwamp\Languages\MyDutch.isl"
+Name: "fi"; MessagesFile: "compiler:Languages\Finnish.isl,dev\build\exe\doliwamp\Languages\MyFinnish.isl"
+Name: "fr"; MessagesFile: "compiler:Languages\French.isl,dev\build\exe\doliwamp\Languages\MyFrench.isl"
+Name: "ge"; MessagesFile: "compiler:Languages\German.isl,dev\build\exe\doliwamp\Languages\MyGerman.isl"
+Name: "it"; MessagesFile: "compiler:Languages\Italian.isl,dev\build\exe\doliwamp\Languages\MyItalian.isl"
+Name: "nb"; MessagesFile: "compiler:Languages\Norwegian.isl,dev\build\exe\doliwamp\Languages\MyNorwegian.isl"
+Name: "po"; MessagesFile: "compiler:Languages\Polish.isl,dev\build\exe\doliwamp\Languages\MyPolish.isl"
+Name: "pt"; MessagesFile: "compiler:Languages\Portuguese.isl,dev\build\exe\doliwamp\Languages\MyPortuguese.isl"
+Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl,dev\build\exe\doliwamp\Languages\MyRussian.isl"
+Name: "sv"; MessagesFile: "compiler:Languages\Slovenian.isl,dev\build\exe\doliwamp\Languages\MySlovenian.isl"
 
 [Tasks]
 ;Name: "autostart"; Description: "Automatically launch DoliWamp server on startup. If you check this option, Services will be installed as automatic. Otherwise, services will be installed as manual and will start and stop with the service manager."; GroupDescription: "Auto Start:" ;Flags: unchecked;
@@ -84,9 +84,9 @@ Name: "{app}\bin\apache\apache2.4.51\logs"
 
 [Files]
 ; Stop/start
-Source: "build\exe\doliwamp\stopdoliwamp.bat"; DestDir: "{app}\"; Flags: ignoreversion; AfterInstall: close()
-Source: "build\exe\doliwamp\startdoliwamp.bat"; DestDir: "{app}\"; Flags: ignoreversion;
-Source: "build\exe\doliwamp\install_services.bat.install"; DestDir: "{app}\"; Flags: ignoreversion;
+Source: "dev\build\exe\doliwamp\stopdoliwamp.bat"; DestDir: "{app}\"; Flags: ignoreversion; AfterInstall: close()
+Source: "dev\build\exe\doliwamp\startdoliwamp.bat"; DestDir: "{app}\"; Flags: ignoreversion;
+Source: "dev\build\exe\doliwamp\install_services.bat.install"; DestDir: "{app}\"; Flags: ignoreversion;
 Source: "build\exe\doliwamp\uninstall_services.bat.install"; DestDir: "{app}\"; Flags: ignoreversion;
 Source: "build\exe\doliwamp\removefiles.bat"; DestDir: "{app}\"; Flags: ignoreversion;
 Source: "build\exe\doliwamp\rundoliwamp.bat.install"; DestDir: "{app}\"; Flags: ignoreversion;

@@ -1152,7 +1152,7 @@ if ($nboftargetok) {
 
     		print "Prepare file \"$SOURCEBACK\\dev\\build\\exe\\doliwamp\\doliwamp.tmp.iss\" from \"$SOURCEBACK\\dev\\build\\exe\\doliwamp\\doliwamp.iss\"\n";
 
-    		#$ret=`cat "$SOURCE/dev/build/exe/doliwamp/doliwamp.iss" | sed -e 's/__FILENAMEEXEDOLIWAMP__/$FILENAMEEXEDOLIWAMP/g' > "$SOURCE/build/exe/doliwamp/doliwamp.tmp.iss"`;
+    		#$ret=`cat "$SOURCE/dev/build/exe/doliwamp/doliwamp.iss" | sed -e 's/__FILENAMEEXEDOLIWAMP__/$FILENAMEEXEDOLIWAMP/g' > "$SOURCE/dev/build/exe/doliwamp/doliwamp.tmp.iss"`;
     		open(IN, '<' . $SOURCE."/dev/build/exe/doliwamp/doliwamp.iss") or die $!;
 			open(OUT, '>' . "$SOURCE/dev/build/exe/doliwamp/doliwamp.tmp.iss") or die $!;
 			while(<IN>)
@@ -1184,9 +1184,9 @@ if ($nboftargetok) {
             #$ret=`mv "$SOURCE/dev/build/$FILENAMEEXEDOLIWAMP.exe" "$NEWDESTI/$FILENAMEEXEDOLIWAMP.exe"`;
             $ret=move("$SOURCE/dev/build/$FILENAMEEXEDOLIWAMP.exe", "$NEWDESTI/$FILENAMEEXEDOLIWAMP.exe");
 
-            print "Remove tmp file $SOURCE/dev/build/exe/doliwamp/doliwamp.tmp.iss\n";
-            #$ret=`rm "$SOURCE/dev/build/exe/doliwamp/doliwamp.tmp.iss"`;
-            $ret=unlink("$SOURCE/dev/build/exe/doliwamp/doliwamp.tmp.iss");
+			print "Remove tmp file $SOURCE/dev/build/exe/doliwamp/doliwamp.tmp.iss\n";
+			#$ret=`rm "$SOURCE/dev/build/exe/doliwamp/doliwamp.tmp.iss"`;
+			$ret=unlink("$SOURCE/dev/build/exe/doliwamp/doliwamp.tmp.iss");
 
     		next;
     	}
